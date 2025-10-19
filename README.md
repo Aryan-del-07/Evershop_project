@@ -32,16 +32,24 @@ Demonstrated hands-on expertise in AWS services, system configuration, and cloud
 
 🔹 Technologies Used
 
-AWS EC2 
-RDS (MySQL/PostgreSQL) 
-S3 
-CloudFront 
-Route 53 
-ACM 
-Auto Scaling 
-Load Balancer 
-NGINX 
+-> AWS EC2 
 
-Node.js 
+-> RDS (MySQL/PostgreSQL) 
 
-PM2
+-> S3 
+
+-> CloudFront 
+
+-> Route 53 
+
+-> ACM 
+
+-> Auto Scaling 
+
+-> Load Balancer 
+
+-> NGINX 
+
+-> Node.js 
+
+-> PM2
