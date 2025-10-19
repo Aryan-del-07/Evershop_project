@@ -10,45 +10,45 @@ The project focuses on designing and implementing a complete AWS architecture th
 
 🔹 Key Components Implemented
 
-Amazon EC2 + RDS Integration
+1.Amazon EC2 + RDS Integration
 
-Launched EC2 instance (Amazon Linux/Ubuntu) and configured SSH access.
+  Launched EC2 instance (Amazon Linux/Ubuntu) and configured SSH access.
 
-Created and connected MySQL RDS database from EC2 using CLI.
+  Created and connected MySQL RDS database from EC2 using CLI.
 
-Created tables, inserted, and verified sample data.
+  Created tables, inserted, and verified sample data.
 
-E-Commerce Application Deployment
+2.E-Commerce Application Deployment
 
-Deployed EverShop (Node.js + PostgreSQL) on EC2.
+  Deployed EverShop (Node.js + PostgreSQL) on EC2.
 
-Configured environment variables and PostgreSQL database.
+  Configured environment variables and PostgreSQL database.
 
-Hosted and ran the application using PM2 and NGINX reverse proxy for stability and public access.
+  Hosted and ran the application using PM2 and NGINX reverse proxy for stability and public access.
 
-Amazon S3 Integration
+3.Amazon S3 Integration
 
-Created an S3 bucket for storing product images.
+  Created an S3 bucket for storing product images.
 
-Configured public read access and integrated image URLs in the web app.
+  Configured public read access and integrated image URLs in the web app.
 
-Auto Scaling and Load Balancing
+4.Auto Scaling and Load Balancing
 
-Designed Launch Templates for EC2 instance replication.
+  Designed Launch Templates for EC2 instance replication.
 
-Created an Auto Scaling Group (ASG) and Application Load Balancer (ALB) for traffic distribution and fault tolerance.
+  Created an Auto Scaling Group (ASG) and Application Load Balancer (ALB) for traffic distribution and fault tolerance.
 
-Deployed a simple Apache web server to test scalability.
+  Deployed a simple Apache web server to test scalability.
 
-Domain & SSL Configuration (Route 53 + ACM)
+5.Domain & SSL Configuration (Route 53 + ACM)
 
-Registered custom domain using Route 53.
+  Registered custom domain using Route 53.
 
-Requested and validated SSL certificates using AWS Certificate Manager (ACM).
+  Requested and validated SSL certificates using AWS Certificate Manager (ACM).
 
-Configured HTTPS traffic through ALB + CloudFront for global secure access.
+  Configured HTTPS traffic through ALB + CloudFront for global secure access.
 
-CloudFront + S3 Integration (CDN)
+6.CloudFront + S3 Integration (CDN)
 
 Created CloudFront distribution to serve static content globally.
 
