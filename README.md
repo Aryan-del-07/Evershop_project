@@ -11,10 +11,15 @@ The project focuses on designing and implementing a complete AWS architecture th
 🔹 Key Components Implemented
 
 1.Amazon EC2 + RDS Integration
+
 2.E-Commerce Application Deployment
+
 3.Amazon S3 Integration
+
 4.Auto Scaling and Load Balancing
+
 5.Domain & SSL Configuration (Route 53 + ACM)
+
 6.CloudFront + S3 Integration (CDN)
 
 🔹 Outcome
