@@ -48,8 +48,3 @@ Demonstrated hands-on expertise in AWS services, system configuration, and cloud
 
 -> Load Balancer 
 
--> NGINX 
-
--> Node.js 
-
--> PM2
