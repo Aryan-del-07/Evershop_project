@@ -1,50 +1,131 @@
-AWS Cloud Infrastructure Project — E-Commerce Deployment
+<div align="center">
 
-By Aryan Sahoo (NullClass Internship Project)
+# ☁️ EverShop — AWS Cloud E-Commerce Deployment
 
-This project demonstrates full-stack deployment of an E-Commerce Web Application on AWS Cloud using various core services for scalability, security, and performance.
+**Production-grade e-commerce infrastructure on AWS**
 
-🔹 Project Overview
+[![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)](https://aws.amazon.com)
+[![EC2](https://img.shields.io/badge/EC2-Compute-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)](https://aws.amazon.com/ec2/)
+[![RDS](https://img.shields.io/badge/RDS-Database-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white)](https://aws.amazon.com/rds/)
+[![S3](https://img.shields.io/badge/S3-Storage-569A31?style=for-the-badge&logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
+[![CloudFront](https://img.shields.io/badge/CloudFront-CDN-8C4FFF?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/cloudfront/)
 
-The project focuses on designing and implementing a complete AWS architecture that hosts an e-commerce platform integrated with databases, storage, CDN, load balancing, auto-scaling, and secure domain configuration.
+A complete AWS cloud infrastructure project that deploys a scalable, secure, and globally accessible e-commerce web application using industry best practices.
 
-🔹 Key Components Implemented
+*Built as part of the NullClass Internship Program*
 
-1.  Amazon EC2 + RDS Integration
+---
 
-2.  E-Commerce Application Deployment
+</div>
 
-3.  Amazon S3 Integration
+## 🏗️ Architecture Overview
 
-4.  Auto Scaling and Load Balancing
+```
+                    ┌─────────────┐
+                    │   Route 53  │  ← Custom Domain + DNS
+                    │   + ACM     │  ← SSL/TLS Certificate
+                    └──────┬──────┘
+                           │
+                    ┌──────▼──────┐
+                    │ CloudFront  │  ← Global CDN
+                    │   (CDN)     │
+                    └──────┬──────┘
+                           │
+                ┌──────────┼──────────┐
+                │                     │
+         ┌──────▼──────┐      ┌──────▼──────┐
+         │    ALB       │      │     S3      │
+         │ (Load Bal.)  │      │  (Static)   │
+         └──────┬──────┘      └─────────────┘
+                │
+        ┌───────┼───────┐
+        │               │
+  ┌─────▼─────┐  ┌─────▼─────┐
+  │   EC2 #1  │  │   EC2 #2  │  ← Auto Scaling Group
+  │  (App)    │  │  (App)    │
+  └─────┬─────┘  └─────┬─────┘
+        │               │
+        └───────┬───────┘
+                │
+         ┌──────▼──────┐
+         │    RDS      │
+         │ (Database)  │
+         └─────────────┘
+```
 
-5.  Domain & SSL Configuration (Route 53 + ACM)
+## ⚡ AWS Services Used
 
-6.  CloudFront + S3 Integration (CDN)
+| Service | Purpose |
+|---------|---------|
+| **Amazon EC2** | Application hosting on virtual servers |
+| **Amazon RDS** | Managed relational database (MySQL/PostgreSQL) |
+| **Amazon S3** | Static asset storage (images, media, backups) |
+| **Elastic Load Balancer** | Distributes traffic across EC2 instances |
+| **Auto Scaling** | Automatically adjusts capacity based on demand |
+| **Amazon CloudFront** | Global CDN for low-latency content delivery |
+| **Route 53** | DNS management and custom domain routing |
+| **AWS ACM** | SSL/TLS certificate for HTTPS encryption |
 
-🔹 Outcome
+## 🔧 Key Components Implemented
 
-Successfully deployed a secure, auto-scalable, and globally accessible e-commerce website on AWS.
+### 1. 🖥️ EC2 + RDS Integration
+- Launched EC2 instances with the EverShop e-commerce application
+- Connected to RDS for persistent, managed database storage
+- Configured security groups for secure communication
 
-Integrated database, application, storage, and networking services following industry best practices.
+### 2. 🛒 E-Commerce Application Deployment
+- Full-stack EverShop application deployed and configured
+- Product catalog, shopping cart, and checkout functionality
+- Admin dashboard for inventory management
 
-Demonstrated hands-on expertise in AWS services, system configuration, and cloud-based application hosting.
+### 3. 📦 Amazon S3 Integration
+- Static assets served from S3 buckets
+- Configured bucket policies and access controls
+- Lifecycle rules for cost-optimized storage
 
-🔹 Technologies Used
+### 4. ⚖️ Auto Scaling & Load Balancing
+- Application Load Balancer for intelligent traffic distribution
+- Auto Scaling Group with health checks and scaling policies
+- Handles traffic spikes without manual intervention
 
--> AWS EC2 
+### 5. 🌐 Domain & SSL Configuration
+- Custom domain setup via Route 53
+- SSL/TLS certificate provisioned through ACM
+- HTTPS enforced across all endpoints
 
--> RDS (MySQL/PostgreSQL) 
+### 6. 🚀 CloudFront CDN
+- Global content distribution for fast load times
+- S3 origin integration for static content
+- Edge caching for improved performance worldwide
 
--> S3 
+## 📊 Outcome
 
--> CloudFront 
+✅ Deployed a **secure, auto-scalable, and globally accessible** e-commerce platform  
+✅ Integrated database, application, storage, and networking services  
+✅ Followed **AWS Well-Architected Framework** best practices  
+✅ Demonstrated hands-on expertise in production-grade cloud infrastructure  
 
--> Route 53 
+## 📄 Documentation
 
--> ACM 
+Detailed step-by-step documentation with screenshots is available in [`AWS.docx`](AWS.docx).
 
--> Auto Scaling 
+## 🛠️ Technologies
 
--> Load Balancer 
+<p>
+  <img src="https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white" />
+  <img src="https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logo=amazonrds&logoColor=white" />
+  <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white" />
+  <img src="https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Route_53-8C4FFF?style=flat-square&logo=amazonroute53&logoColor=white" />
+  <img src="https://img.shields.io/badge/Auto_Scaling-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Load_Balancer-8C4FFF?style=flat-square&logo=awselasticloadbalancing&logoColor=white" />
+  <img src="https://img.shields.io/badge/ACM-DD344C?style=flat-square&logo=amazonaws&logoColor=white" />
+</p>
 
+---
+
+<div align="center">
+
+**Built with ☁️ by [Aryan](https://github.com/Aryan-del-07)**
+
+</div>
